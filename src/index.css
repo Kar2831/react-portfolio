@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+ 
+.moving-gradient-text-mobile {
+  font-size: 1.8rem; /* adjust as needed */
+  font-weight: bold;
+  background: linear-gradient(90deg, #4f46e5, #ec4899, #facc15, #4f46e5);
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientMove 5s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 200% 100%;
+  }
+}
+.moving-gradient-text {
+  font-size: 2rem; /* adjust as needed */
+  font-weight: bold;
+  background: linear-gradient(90deg, #4f46e5, #ec4899, #facc15, #4f46e5);
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientMove 5s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 200% 100%;
+  }
+}
+
+.link-hover-effect li{
+  @apply relative before:content-[""] before:absolute before:left-[50%] before:-bottom-2 before:w-0 before:h-1 before:transition-all before:duration-300 before:bg-gradient-to-r before:from-purple-500 before:to-pink-500 hover:before:left-0 hover:before:w-full
+}
+
+.logo-animate{
+  @apply text-3xl font-serif font-bold bg-gradient-to-r from-purple-600 via-violet-500 to-pink-800 bg-clip-text text-transparent 
+}
+
+.gradient-bg-animated {
+  background: linear-gradient(270deg, #0c0a0c6d, #392c2c00);
+  background-size: 300% 100%;
+  animation: gradientMove 4s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+   100% {
+    background-position: 100% 50%;
+  }
+}
+
+.menu-button{
+  @apply px-10 py-3 before:-z-1  text-xl text-white border-2 border-white rounded-lg relative before:absolute before:content-[""] before:bg-white before:left-0 before:top-0 before:w-0 before:h-full before:rounded-lg before:transition-all before:duration-300 hover:before:w-full hover:text-black
+}
+
+.menu-button-linkedin{
+    @apply px-10 py-3 before:-z-1 text-xl text-white border-2 border-white rounded-lg relative before:absolute before:content-[""] before:bg-gradient-to-r before:from-blue-800 before:via-blue-900 before:to-blue-900 before:left-0 before:top-0 before:w-0 before:h-full before:rounded-lg before:transition-all before:duration-300 hover:before:w-full
+
+}
+
+.menu-button-github{
+    @apply px-12 py-3 before:-z-1 text-xl text-white border-2 border-white rounded-lg relative before:absolute before:content-[""] before:bg-gradient-to-r before:from-gray-800 before:via-gray-900 before:to-gray-900 before:left-0 before:top-0 before:w-0 before:h-full before:rounded-lg before:transition-all before:duration-300 hover:before:w-full
+
+}
+
+.hero-content{
+  @apply text-xl text-white w-1/2 flex flex-col justify-start items-start space-y-10
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee {
+  display: flex;
+  gap: 1.5rem;
+  animation: marquee 10s linear infinite;
+  width: max-content;
+}
+
+.bg-template-absolute{
+  @apply absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]
+}
+
+.bg-template{
+  @apply relative z-0 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]
+}
+
+.bg-template-contact{
+  @apply inset-0 -z-10 items-center px-5 py-7 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]
+}
+
+.bg-template-skill{
+  @apply inset-0 -z-10 items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]
+}
+
+.bg-template-achievement{
+  @apply inset-0 -z-10 items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]
+}
